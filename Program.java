@@ -13,14 +13,12 @@ public class Program extends Frame{
     TextField tugasInput, kuisInput, utsInput, uasInput, hasilInput;
     CheckboxGroup cbg;
 
-
     public Program(){
         this.setLayout(null);
 
         judul = new Label("Hitung Nilai Akhir");
         judul.setFont(new Font("Arial",1,15));
         judul.setBounds(115,30,170,20);
-
 
         cbg = new CheckboxGroup();
         asd = new Checkbox("asd",cbg,false);
@@ -33,7 +31,6 @@ public class Program extends Frame{
         probstat.setBounds(290,65,90,20);
 
 
-       
         //Memmbuat komponen yang akan diinput user
         tugas = new Label("Tugas : ");
         tugas.setBounds(120,100,70,20);
@@ -80,7 +77,6 @@ public class Program extends Frame{
         showAllButton.setBounds(50,550,300,20);
        
 
-       
         //Menambahkan semua komponen
         this.add(judul);
         this.add(asd);
@@ -213,9 +209,8 @@ public class Program extends Frame{
     public static void main(String[] args){
         Program frame = new Program();
         frame.setSize(400,600);
-
         frame.setVisible(true);
-
+        //Agar window bisa diclose
         frame.addWindowListener(new WindowAdapter(){
             @Override
             public void windowClosing(WindowEvent w){
